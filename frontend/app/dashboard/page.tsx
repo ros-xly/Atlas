@@ -7,21 +7,25 @@ export default function Dashboard() {
 
       <div className="border rounded-lg p-4 mb-4 shadow-sm">
         <h2 className="font-semibold">
-          Current Goals
+          Goals
         </h2>
-        <p>3 Active Goals</p>
+        <p>3 Goals Tracked</p>
+        <p className="mt-2">
+        1 Goal Completed
+      </p>
       </div>
+
 
       <div className="border rounded-lg p-4 mb-4 shadow-sm">
         <h2 className="font-semibold">
-          Today's Activities
+          Activities
         </h2>
         <p>No activities planned</p>
       </div>
 
       <div className="border rounded-lg p-4 shadow-sm">
         <h2 className="font-semibold">
-          Weekly Progress
+          Progress
         </h2>
         <p>0%</p>
       </div>

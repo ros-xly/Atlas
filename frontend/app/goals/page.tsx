@@ -21,8 +21,17 @@ export default function Goals() {
           </h2>
 
           <p className="text-sm">
-            {goal.category}
+          {goal.category}
           </p>
+
+          <p className="text-sm mt-2">
+          {goal.completed ? "✅ Complete" : "⬜ In Progress"}
+          </p>
+
+          <p className="text-sm">
+            Progress: {goal.progress}%
+          </p>
+
         </div>
       ))}
     </main>
