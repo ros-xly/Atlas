@@ -51,6 +51,10 @@ export default function Dashboard() {
           {dashboard.eventCount} Upcoming Events
       </p>
 
+      <p>
+          {dashboard.linkedEvents} Goal Linked Event
+      </p>
+
       </div>
 
 

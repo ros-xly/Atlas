@@ -13,3 +13,13 @@ Week 5 - Goals
 DashboardCard component created.
 
 Future widgets will use DashboardCard.
+
+Future Event Dashboard
+
+Countdowns
+
+Linked Goals
+
+Linked Plans
+
+Upcoming Events
