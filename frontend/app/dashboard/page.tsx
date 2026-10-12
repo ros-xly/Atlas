@@ -1,7 +1,7 @@
 import { dashboard } from "@/lib/dashboard";
 export default function Dashboard() {
   return (
-    <main className="p-6">
+    <main className="p-4 max-w-md">
       <h1 className="text-3xl font-bold mb-6">
         Dashboard
       </h1>
@@ -55,7 +55,7 @@ export default function Dashboard() {
 
       <div className="border rounded-lg p-4 shadow-sm mt-4">
        <h2 className="font-semibold mb-2">
-         Today's Tasks
+         Today's Training
       </h2>
 
       <ul>

@@ -2,7 +2,7 @@ import { goals } from "@/lib/goals";
 
 export default function Goals() {
   return (
-    <main className="p-6">
+    <main className="p-4 max-w-md">
       <h1 className="text-3xl font-bold mb-6">
         Goals
       </h1>
