@@ -3,4 +3,5 @@ export const dashboard = {
   goalsCompleted: 1,
   activitiesToday: 2,
   weeklyProgress: 35,
+  exerciseCount: 3,
 };

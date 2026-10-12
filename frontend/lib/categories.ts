@@ -1,5 +1,13 @@
 export const categories = [
   "Gym",
   "Running",
-  "Aerial"
+  "Aerial",
+];
+
+export const exerciseCategories = [
+  "Push",
+  "Pull",
+  "Legs",
+  "Core",
+  "Conditioning",
 ];

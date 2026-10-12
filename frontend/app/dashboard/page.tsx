@@ -18,6 +18,11 @@ export default function Dashboard() {
       <p>
         {dashboard.goalsCompleted} Goals Completed
       </p>
+
+      <p>
+        {dashboard.exerciseCount} Exercises Saved
+        </p>
+        
       </div>
 
 
