@@ -35,6 +35,10 @@ export default function Dashboard() {
         Suggested Increase: {dashboard.suggestedIncrease}
       </p>
 
+      <p>
+        {dashboard.runCount} Runs Logged
+      </p>
+
       </div>
 
 

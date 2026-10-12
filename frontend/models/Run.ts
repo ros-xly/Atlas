@@ -1,5 +1,7 @@
 export interface Run {
   id: number;
   distance: number;
-  duration: number;
+  duration: string;
+  feeling: string;
+  notes: string;
 }
