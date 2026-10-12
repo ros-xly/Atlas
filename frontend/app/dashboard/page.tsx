@@ -27,6 +27,10 @@ export default function Dashboard() {
         {dashboard.workoutCount} Workouts Saved
       </p>
 
+      <p>
+         {dashboard.completedWorkouts} Workouts Completed
+      </p>
+
       </div>
 
 

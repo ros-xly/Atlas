@@ -5,4 +5,5 @@ export const dashboard = {
   weeklyProgress: 35,
   exerciseCount: 3,
   workoutCount: 2,
+  completedWorkouts: 1,
 };
