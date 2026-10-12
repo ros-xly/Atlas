@@ -9,7 +9,7 @@ export default function Dashboard() {
         <h2 className="font-semibold">
           Current Goals
         </h2>
-        <p>No goals yet</p>
+        <p>3 Active Goals</p>
       </div>
 
       <div className="border rounded-lg p-4 mb-4 shadow-sm">
