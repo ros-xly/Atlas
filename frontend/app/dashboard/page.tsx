@@ -47,6 +47,10 @@ export default function Dashboard() {
           {dashboard.totalDistance}km Logged
       </p>
 
+      <p>
+          {dashboard.eventCount} Upcoming Events
+      </p>
+
       </div>
 
 

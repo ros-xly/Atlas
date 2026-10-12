@@ -10,5 +10,5 @@ export const dashboard = {
   runCount: 2,
   runningPlans: 2,
   totalDistance: 13,
-
+  eventCount: 3,
 };
