@@ -1,3 +1,4 @@
+import { dashboard } from "@/lib/dashboard";
 export default function Dashboard() {
   return (
     <main className="p-6">
@@ -5,30 +6,65 @@ export default function Dashboard() {
         Dashboard
       </h1>
 
-      <div className="border rounded-lg p-4 mb-4 shadow-sm">
-        <h2 className="font-semibold">
-          Goals
-        </h2>
-        <p>3 Goals Tracked</p>
-        <p className="mt-2">
-        1 Goal Completed
+      <div className="border rounded-lg p-4 shadow-sm">
+      <h2 className="font-semibold mb-2">
+        Goals
+      </h2>
+
+      <p>
+        {dashboard.goalsTracked} Goals Tracked
+      </p>
+
+      <p>
+        {dashboard.goalsCompleted} Goals Completed
       </p>
       </div>
 
 
-      <div className="border rounded-lg p-4 mb-4 shadow-sm">
-        <h2 className="font-semibold">
+      <div className="border rounded-lg p-4 shadow-sm mt-4">
+        <h2 className="font-semibold mb-2">
           Activities
         </h2>
-        <p>No activities planned</p>
+
+        <p>
+        {dashboard.activitiesToday} Activities Today
+        </p>
       </div>
 
-      <div className="border rounded-lg p-4 shadow-sm">
-        <h2 className="font-semibold">
-          Progress
+      <div className="border rounded-lg p-4 shadow-sm mt-4">
+        <h2 className="font-semibold mb-2">
+          Weekly Progress
+       </h2>
+
+        <p>
+          {dashboard.weeklyProgress}% Complete
+        </p>
+        </div>
+
+      <div className="border rounded-lg p-4 shadow-sm mt-4">
+        <h2 className="font-semibold mb-2">
+          Recent Activity
         </h2>
-        <p>0%</p>
+
+        <ul>
+          <li>Run 10k completed</li>
+          <li>Bench progress updated</li>
+          <li>Invert goal created</li>
+        </ul>
       </div>
+
+      <div className="border rounded-lg p-4 shadow-sm mt-4">
+       <h2 className="font-semibold mb-2">
+         Today's Tasks
+      </h2>
+
+      <ul>
+        <li>Gym Session</li>
+        <li>Stretching</li>
+      </ul>
+    </div>
+
+
     </main>
   );
 }
