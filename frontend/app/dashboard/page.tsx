@@ -31,6 +31,10 @@ export default function Dashboard() {
          {dashboard.completedWorkouts} Workouts Completed
       </p>
 
+      <p>
+        Suggested Increase: {dashboard.suggestedIncrease}
+      </p>
+
       </div>
 
 

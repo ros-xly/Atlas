@@ -6,4 +6,5 @@ export const dashboard = {
   exerciseCount: 3,
   workoutCount: 2,
   completedWorkouts: 1,
+  suggestedIncrease: "4%",
 };
