@@ -9,4 +9,6 @@ export const dashboard = {
   suggestedIncrease: "4%",
   runCount: 2,
   runningPlans: 2,
+  totalDistance: 13,
+
 };

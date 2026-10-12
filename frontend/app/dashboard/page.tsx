@@ -43,6 +43,10 @@ export default function Dashboard() {
          {dashboard.runningPlans} Running Plans
       </p>
 
+      <p>
+          {dashboard.totalDistance}km Logged
+      </p>
+
       </div>
 
 
