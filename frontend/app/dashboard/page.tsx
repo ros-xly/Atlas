@@ -39,6 +39,10 @@ export default function Dashboard() {
         {dashboard.runCount} Runs Logged
       </p>
 
+      <p>
+         {dashboard.runningPlans} Running Plans
+      </p>
+
       </div>
 
 
