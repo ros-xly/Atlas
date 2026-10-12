@@ -22,7 +22,11 @@ export default function Dashboard() {
       <p>
         {dashboard.exerciseCount} Exercises Saved
         </p>
-        
+
+      <p>
+        {dashboard.workoutCount} Workouts Saved
+      </p>
+
       </div>
 
 
