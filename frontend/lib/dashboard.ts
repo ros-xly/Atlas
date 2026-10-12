@@ -12,4 +12,5 @@ export const dashboard = {
   totalDistance: 13,
   eventCount: 3,
   linkedEvents: 1,
+  skillCount: 3,
 };

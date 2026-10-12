@@ -55,6 +55,10 @@ export default function Dashboard() {
           {dashboard.linkedEvents} Goal Linked Event
       </p>
 
+      <p>
+          {dashboard.skillCount} Skills Stored
+        </p>
+
       </div>
 
 
