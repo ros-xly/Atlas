@@ -67,6 +67,10 @@ export default function Dashboard() {
          {dashboard.routineCount} Routines Created
         </p>
 
+        <p>
+          {dashboard.plannedDays} Planned Days
+        </p>
+
       </div>
 
 

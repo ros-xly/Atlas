@@ -15,4 +15,5 @@ export const dashboard = {
   skillCount: 3,
   conditioningTemplates: 2,
   routineCount: 2,
+  plannedDays: 7,
 };
