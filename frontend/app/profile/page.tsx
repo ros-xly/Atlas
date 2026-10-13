@@ -1,6 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {
+  useEffect,
+  useState,
+} from "react";
+
 import FloatCard from "@/components/FloatCard";
 
 export default function Profile() {
@@ -27,18 +31,36 @@ export default function Profile() {
       </h1>
 
       {user && (
-        <FloatCard>
-          <h2 className="text-xl font-bold">
-            🌸 {user.name}
-          </h2>
+        <>
+          <FloatCard>
+            <h2 className="text-2xl font-bold">
+              🌸 {user.name}
+            </h2>
 
-          <p>
-            {user.email}
-          </p>
+            <p>{user.email}</p>
 
-          <p className="mt-4">
-            Float Member ✨
-          </p>
+            <p className="mt-4">
+              Float Member ✨
+            </p>
+          </FloatCard>
+
+          <FloatCard>
+            <p>
+              🎯 Goals
+            </p>
+
+            <p>
+              🏃 Runs
+            </p>
+
+            <p>
+              🎪 Aerial
+            </p>
+
+            <p>
+              👯 Friends
+            </p>
+          </FloatCard>
 
           <button
             className="float-button mt-4"
@@ -49,12 +71,11 @@ export default function Profile() {
 
               window.location.href =
                 "/login";
-             }}
+            }}
           >
             Logout
           </button>
-
-        </FloatCard>
+        </>
       )}
     </main>
   );

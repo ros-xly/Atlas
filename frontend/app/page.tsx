@@ -28,11 +28,12 @@ export default function Home() {
       </h1>
 
       <p className="text-lg mb-6">
-        Hi {name} 🌸
+        Welcome back,
+          {name} 🌸
       </p>
 
       <p className="mb-6 text-gray-600">
-        Plan. Train. Progress.
+        Ready to make progress today?
       </p>
 
       <div className="space-y-4">

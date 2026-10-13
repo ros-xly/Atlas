@@ -1,13 +1,9 @@
 "use client";
 
-import {
-  useEffect,
-  useState,
-} from "react";
-
-import Link from "next/link";
+import { useEffect, useState } from "react";
 
 import FloatCard from "@/components/FloatCard";
+import FloatingActionButton from "@/components/FloatingActionButton";
 import VisibilityBadge from "@/components/VisibilityBadge";
 
 export default function Goals() {
@@ -30,34 +26,25 @@ export default function Goals() {
       JSON.parse(stored);
 
     const response =
-      await fetch(
-        "/api/goals"
-      );
+      await fetch("/api/goals");
 
     const allGoals =
       await response.json();
 
-    const userGoals =
+    setGoals(
       allGoals.filter(
         (goal: any) =>
           goal.ownerEmail ===
           user.email
-      );
-
-    setGoals(userGoals);
+      )
+    );
   }
 
   return (
     <main className="p-6 max-w-md mx-auto">
-      <h1 className="text-4xl font-bold text-pink-500 mb-4">
+      <h1 className="text-4xl font-bold text-pink-500 mb-6">
         🎯 Goals
       </h1>
-
-      <Link href="/goals/create">
-        <button className="float-button mb-6">
-          Add Goal 💖
-        </button>
-      </Link>
 
       {goals.length === 0 && (
         <FloatCard>
@@ -66,20 +53,19 @@ export default function Goals() {
           </h2>
 
           <p>
-            Create your first goal.
+            Tap + to create your first
+            goal.
           </p>
         </FloatCard>
       )}
 
       {goals.map((goal) => (
         <FloatCard key={goal.id}>
-          <h2 className="font-bold text-lg">
+          <h2 className="font-bold">
             {goal.title}
           </h2>
 
-          <p>
-            {goal.category}
-          </p>
+          <p>{goal.category}</p>
 
           <VisibilityBadge
             visibility={
@@ -88,6 +74,10 @@ export default function Goals() {
           />
         </FloatCard>
       ))}
+
+      <FloatingActionButton
+        href="/goals/create"
+      />
     </main>
   );
 }
