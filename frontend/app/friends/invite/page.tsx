@@ -1,8 +1,16 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export default function InviteFriend() {
-  const inviteLink =
-    window !== undefined
-      ? window.location.origin
-      : "";
+  const [inviteLink, setInviteLink] =
+    useState("");
+
+  useEffect(() => {
+    setInviteLink(
+      window.location.origin
+    );
+  }, []);
 
   return (
     <main className="p-6 max-w-md mx-auto">
@@ -14,12 +22,16 @@ export default function InviteFriend() {
         Invite friends to join Float.
       </p>
 
-      <a
-        className="float-button"
-        href={`https://wa.me/?text=Join Float ✨ ${inviteLink}`}
-      >
-        Share On WhatsApp 💖
-      </a>
+      {inviteLink && (
+        <a
+          className="float-button"
+          href={`https://wa.me/?text=Join Float ✨ ${inviteLink}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Share on WhatsApp 💖
+        </a>
+      )}
     </main>
   );
 }
