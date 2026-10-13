@@ -13,4 +13,5 @@ export const dashboard = {
   eventCount: 3,
   linkedEvents: 1,
   skillCount: 3,
+  conditioningTemplates: 2,
 };

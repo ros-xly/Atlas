@@ -59,6 +59,10 @@ export default function Dashboard() {
           {dashboard.skillCount} Skills Stored
         </p>
 
+        <p>
+          {dashboard.conditioningTemplates} Conditioning Templates
+        </p>
+
       </div>
 
 
