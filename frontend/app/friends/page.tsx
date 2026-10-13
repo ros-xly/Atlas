@@ -1,26 +1,22 @@
-import { friends } from "@/lib/friends";
+import Link from "next/link";
+import FloatCard from "@/components/FloatCard";
 
-export default function FriendsPage() {
+export default function Friends() {
   return (
-    <main className="p-4 max-w-md">
-      <h1 className="text-3xl font-bold mb-4">
-        Friends
+    <main className="p-6 max-w-md mx-auto">
+      <h1 className="text-4xl font-bold text-pink-500 mb-6">
+        👯 Friends
       </h1>
 
-      {friends.map((friend) => (
-        <div
-          key={friend.id}
-          className="border rounded-lg p-4 mb-3"
-        >
-          <h2 className="font-semibold">
-            {friend.name}
-          </h2>
+      <Link href="/friends/invite">
+        <FloatCard>
+          💖 Invite Friends
+        </FloatCard>
+      </Link>
 
-          <p>
-            Status: {friend.status}
-          </p>
-        </div>
-      ))}
+      <FloatCard>
+        Friend features coming soon 🌸
+      </FloatCard>
     </main>
   );
 }

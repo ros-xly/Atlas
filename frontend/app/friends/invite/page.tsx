@@ -1,18 +1,25 @@
-export default function InviteFriends() {
+export default function InviteFriend() {
+  const inviteLink =
+    window !== undefined
+      ? window.location.origin
+      : "";
+
   return (
-    <main className="p-4 max-w-md">
-      <h1 className="text-3xl font-bold mb-4">
-        Invite Friends
+    <main className="p-6 max-w-md mx-auto">
+      <h1 className="text-4xl font-bold text-pink-500 mb-6">
+        👯 Invite Friends
       </h1>
 
-      <input
-        className="border p-2 rounded w-full mb-2"
-        placeholder="Friend Email"
-      />
+      <p className="mb-4">
+        Invite friends to join Float.
+      </p>
 
-      <button className="border px-4 py-2 rounded">
-        Send Invite
-      </button>
+      <a
+        className="float-button"
+        href={`https://wa.me/?text=Join Float ✨ ${inviteLink}`}
+      >
+        Share On WhatsApp 💖
+      </a>
     </main>
   );
 }
