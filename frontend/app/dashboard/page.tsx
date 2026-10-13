@@ -79,6 +79,10 @@ export default function Dashboard() {
           {dashboard.friendCount} Friends Connected
         </p>
 
+        <p>
+         {dashboard.sharedItems} Shared Items
+        </p>
+
       </div>
 
 

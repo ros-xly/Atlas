@@ -18,4 +18,5 @@ export const dashboard = {
   plannedDays: 7,
   weeklyPlans: 1,
   friendCount: 2,
+  sharedItems: 5,
 };
