@@ -71,6 +71,10 @@ export default function Dashboard() {
           {dashboard.plannedDays} Planned Days
         </p>
 
+        <p>
+          {dashboard.weeklyPlans} Weekly Plan Active
+        </p>
+
       </div>
 
 

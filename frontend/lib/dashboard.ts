@@ -16,4 +16,5 @@ export const dashboard = {
   conditioningTemplates: 2,
   routineCount: 2,
   plannedDays: 7,
+  weeklyPlans: 1,
 };
