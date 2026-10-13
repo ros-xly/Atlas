@@ -5,7 +5,8 @@ import BottomNav from "../components/BottomNav";
 
 export const metadata: Metadata = {
   title: "Float ✨",
-  description: "Plan. Train. Progress.",
+  description: "Move. Grow. Float.",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
