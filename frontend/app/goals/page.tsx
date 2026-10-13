@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getGoals } from "@/lib/goalStorage";
 
 export default function Goals() {
@@ -9,30 +10,31 @@ export default function Goals() {
         Goals
       </h1>
 
-      <button className="border px-4 py-2 rounded mb-4">
+      <Link
+        href="/goals/create"
+        className="border px-4 py-2 rounded mb-4 inline-block"
+      >
         Add Goal
-      </button>
+      </Link>
 
       {goals.map((goal: any) => (
         <div
           key={goal.id}
-          className="border rounded-lg p-4 mb-3"
+          className="border rounded-lg p-4 mb-3 mt-3"
         >
           <h2 className="font-semibold">
             {goal.title}
           </h2>
 
-          <p className="text-sm">
-            {goal.category}
-          </p>
+          <p>{goal.category}</p>
 
-          <p className="text-sm mt-2">
+          <p className="mt-2">
             {goal.completed
               ? "✅ Complete"
               : "⬜ In Progress"}
           </p>
 
-          <p className="text-sm">
+          <p>
             Progress: {goal.progress}%
           </p>
         </div>

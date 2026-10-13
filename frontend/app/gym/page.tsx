@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { exercises } from "@/lib/exercises";
 
 export default function Gym() {
@@ -7,14 +8,19 @@ export default function Gym() {
         Exercise Library
       </h1>
 
+      <Link
+        href="/gym/create"
+        className="border px-4 py-2 rounded inline-block mb-4"
+      >
+        Add Exercise
+      </Link>
+
       {exercises.map((exercise) => (
         <div
           key={exercise.id}
           className="border rounded-lg p-4 mb-3"
         >
-          <h2 className="font-semibold">
-            {exercise.name}
-          </h2>
+          <h2>{exercise.name}</h2>
 
           <p>
             Category: {exercise.category}

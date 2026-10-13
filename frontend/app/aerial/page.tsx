@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { skills } from "@/lib/skills";
 
 export default function Aerial() {
@@ -7,14 +8,19 @@ export default function Aerial() {
         Skill Library
       </h1>
 
+      <Link
+        href="/aerial/create"
+        className="border px-4 py-2 rounded inline-block mb-4"
+      >
+        Add Skill
+      </Link>
+
       {skills.map((skill) => (
         <div
           key={skill.id}
           className="border rounded-lg p-4 mb-3"
         >
-          <h2 className="font-semibold">
-            {skill.name}
-          </h2>
+          <h2>{skill.name}</h2>
 
           <p>
             Discipline: {skill.discipline}
@@ -27,7 +33,6 @@ export default function Aerial() {
           <p>
             {skill.description}
           </p>
-
         </div>
       ))}
     </main>
