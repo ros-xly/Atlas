@@ -1,8 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import FloatCard from "@/components/FloatCard";
+import {
+  useEffect,
+  useState,
+} from "react";
+
 import Link from "next/link";
+
+import FloatCard from "@/components/FloatCard";
+import VisibilityBadge from "@/components/VisibilityBadge";
 
 export default function Goals() {
   const [goals, setGoals] =
@@ -67,16 +73,21 @@ export default function Goals() {
 
       {goals.map((goal) => (
         <FloatCard key={goal.id}>
-          <h2 className="font-bold">
+          <h2 className="font-bold text-lg">
             {goal.title}
           </h2>
 
           <p>
             {goal.category}
           </p>
+
+          <VisibilityBadge
+            visibility={
+              goal.visibility
+            }
+          />
         </FloatCard>
       ))}
     </main>
   );
 }
-``

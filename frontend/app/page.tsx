@@ -91,6 +91,18 @@ export default function Home() {
           </div>
         </Link>
 
+        <Link href="/community">
+         <div className="float-home-card">
+          <h2 className="text-xl font-bold">
+            🌍 Community
+          </h2>
+          <p>
+            Shared exercises, skills and workouts
+          </p>
+         </div>
+        </Link>
+
+
         <Link href="/friends">
           <div className="float-home-card">
             <h2 className="text-xl font-bold">

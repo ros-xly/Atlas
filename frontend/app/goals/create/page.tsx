@@ -7,6 +7,9 @@ export default function CreateGoal() {
   const [category, setCategory] =
     useState("");
 
+  const [visibility, setVisibility] =
+    useState("private");
+
   async function saveGoal() {
     const stored =
       localStorage.getItem(
@@ -33,6 +36,7 @@ export default function CreateGoal() {
         ownerEmail: user.email,
         title,
         category,
+        visibility,
       }),
     });
 
@@ -40,6 +44,7 @@ export default function CreateGoal() {
 
     setTitle("");
     setCategory("");
+    setVisibility("private");
   }
 
   return (
@@ -57,9 +62,7 @@ export default function CreateGoal() {
         placeholder="Goal Title"
         value={title}
         onChange={(e) =>
-          setTitle(
-            e.target.value
-          )
+          setTitle(e.target.value)
         }
       />
 
@@ -67,9 +70,7 @@ export default function CreateGoal() {
         className="float-input"
         value={category}
         onChange={(e) =>
-          setCategory(
-            e.target.value
-          )
+          setCategory(e.target.value)
         }
       >
         <option value="">
@@ -94,6 +95,28 @@ export default function CreateGoal() {
 
         <option value="Personal">
           🌸 Personal
+        </option>
+      </select>
+
+      <select
+        className="float-input"
+        value={visibility}
+        onChange={(e) =>
+          setVisibility(
+            e.target.value
+          )
+        }
+      >
+        <option value="private">
+          🔒 Private
+        </option>
+
+        <option value="friends">
+          👯 Friends
+        </option>
+
+        <option value="community">
+          🌍 Community
         </option>
       </select>
 

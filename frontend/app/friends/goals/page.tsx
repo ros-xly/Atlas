@@ -1,21 +1,15 @@
-import { friendGoals } from "@/lib/friendGoals";
+import FloatCard from "@/components/FloatCard";
 
-export default function FriendGoals() {
+export default function SharedGoals() {
   return (
-    <main className="p-4 max-w-md">
-      <h1 className="text-3xl font-bold mb-4">
-        Friend Goals
+    <main className="p-6 max-w-md mx-auto">
+      <h1 className="text-4xl font-bold text-pink-500 mb-6">
+        👯 Friend Goals
       </h1>
 
-      {friendGoals.map((goal, index) => (
-        <div
-          key={index}
-          className="border rounded-lg p-4 mb-3"
-        >
-          <p>{goal.friend}</p>
-          <p>{goal.goal}</p>
-        </div>
-      ))}
+      <FloatCard>
+        Coming Soon 🌸
+      </FloatCard>
     </main>
   );
 }

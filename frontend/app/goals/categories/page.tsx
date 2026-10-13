@@ -15,21 +15,29 @@ export default function GoalCategories() {
           </FloatCard>
         </Link>
 
-        <FloatCard>
-          💪 Gym Goals
-        </FloatCard>
+        <Link href="/goals/gym">
+          <FloatCard>
+            💪 Gym Goals
+          </FloatCard>
+        </Link>
 
-        <FloatCard>
-          🏃 Running Goals
-        </FloatCard>
+        <Link href="/goals/running">
+          <FloatCard>
+            🏃 Running Goals
+          </FloatCard>
+        </Link>
 
-        <FloatCard>
-          🎪 Aerial Goals
-        </FloatCard>
+        <Link href="/goals/aerial">
+          <FloatCard>
+            🎪 Aerial Goals
+          </FloatCard>
+        </Link>
 
-        <FloatCard>
-          📅 Event Goals
-        </FloatCard>
+        <Link href="/goals/events">
+          <FloatCard>
+            📅 Event Goals
+          </FloatCard>
+        </Link>
       </div>
     </main>
   );

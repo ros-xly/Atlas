@@ -5,6 +5,7 @@ export const skills = [
     discipline: "Pole",
     description: "Lift hips above head and invert position.",
     difficulty: "Intermediate",
+    createdBy: "Float",
     visibility: "community",
   },
   {
@@ -13,6 +14,7 @@ export const skills = [
     discipline: "Aerial Hoop",
     description: "Foundational hoop position.",
     difficulty: "Beginner",
+    createdBy: "Float",
     visibility: "community",
   },
   {
@@ -21,6 +23,7 @@ export const skills = [
     discipline: "Silks",
     description: "Core silks transition and wrap.",
     difficulty: "Advanced",
+    createdBy: "Float",
     visibility: "community",
   },
 ];

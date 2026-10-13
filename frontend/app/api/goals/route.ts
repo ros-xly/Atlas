@@ -19,9 +19,11 @@ export async function POST(
     ownerEmail: data.ownerEmail,
     title: data.title,
     category: data.category,
+    visibility:
+      data.visibility ||
+      "private",
     completed: false,
     progress: 0,
-    visibility: "private",
   };
 
   goals.push(newGoal);
