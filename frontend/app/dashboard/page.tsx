@@ -74,6 +74,10 @@ export default function Dashboard() {
         <p>
           {dashboard.weeklyPlans} Weekly Plan Active
         </p>
+        
+        <p>
+          {dashboard.friendCount} Friends Connected
+        </p>
 
       </div>
 
