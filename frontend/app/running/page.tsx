@@ -53,3 +53,15 @@ export default function Running() {
     </main>
   );
 }
+
+{runs.length === 0 && (
+  <FloatCard>
+    <h2 className="font-bold">
+      🏃 No runs yet
+    </h2>
+
+    <p>
+      Log your first run.
+    </p>
+  </FloatCard>
+)}

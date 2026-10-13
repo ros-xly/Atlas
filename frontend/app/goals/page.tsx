@@ -1,9 +1,45 @@
-import Link from "next/link";
-import { getGoals } from "@/lib/goalStorage";
+"use client";
+
+import { useEffect, useState } from "react";
 import FloatCard from "@/components/FloatCard";
+import Link from "next/link";
 
 export default function Goals() {
-  const goals = getGoals();
+  const [goals, setGoals] =
+    useState<any[]>([]);
+
+  useEffect(() => {
+    loadGoals();
+  }, []);
+
+  async function loadGoals() {
+    const stored =
+      localStorage.getItem(
+        "atlasUser"
+      );
+
+    if (!stored) return;
+
+    const user =
+      JSON.parse(stored);
+
+    const response =
+      await fetch(
+        "/api/goals"
+      );
+
+    const allGoals =
+      await response.json();
+
+    const userGoals =
+      allGoals.filter(
+        (goal: any) =>
+          goal.ownerEmail ===
+          user.email
+      );
+
+    setGoals(userGoals);
+  }
 
   return (
     <main className="p-6 max-w-md mx-auto">
@@ -12,30 +48,35 @@ export default function Goals() {
       </h1>
 
       <Link href="/goals/create">
-        <button className="float-button mb-4">
-          Add Goal
+        <button className="float-button mb-6">
+          Add Goal 💖
         </button>
       </Link>
 
-      {goals.map((goal: any) => (
+      {goals.length === 0 && (
+        <FloatCard>
+          <h2 className="font-bold">
+            🌸 No goals yet
+          </h2>
+
+          <p>
+            Create your first goal.
+          </p>
+        </FloatCard>
+      )}
+
+      {goals.map((goal) => (
         <FloatCard key={goal.id}>
-          <h2 className="font-bold text-lg">
+          <h2 className="font-bold">
             {goal.title}
           </h2>
 
-          <p>{goal.category}</p>
-
-          <p className="mt-2">
-            {goal.completed
-              ? "✅ Complete"
-              : "🌸 In Progress"}
-          </p>
-
           <p>
-            Progress: {goal.progress}%
+            {goal.category}
           </p>
         </FloatCard>
       ))}
     </main>
   );
 }
+``

@@ -19,24 +19,6 @@ export default function RunningHub() {
           </FloatCard>
         </Link>
 
-        <Link href="/running/plans">
-          <FloatCard>
-            📋 Running Plans
-          </FloatCard>
-        </Link>
-
-        <Link href="/running/analytics">
-          <FloatCard>
-            📈 Analytics
-          </FloatCard>
-        </Link>
-
-        <Link href="/running/history">
-          <FloatCard>
-            📚 Run History
-          </FloatCard>
-        </Link>
-
         <Link href="/goals/categories">
           <FloatCard>
             🎯 Running Goals

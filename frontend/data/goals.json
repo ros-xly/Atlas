@@ -1,23 +1,11 @@
 [
   {
-    "id": 1,
-    "title": "Bench 100kg",
-    "category": "Gym",
+    "id": 1791894335154,
+    "ownerEmail": "rosalynd.xly@gmail.com",
+    "title": "Aerial Invert No Feet Consistantly",
+    "category": "Aerial",
     "completed": false,
-    "progress": 45
-  },
-  {
-    "id": 2,
-    "title": "Run 10k",
-    "category": "Running",
-    "completed": true,
-    "progress": 100
-  },
-  {
-    "id": 1791883350225,
-    "title": "Pull Up",
-    "category": "Gym",
-    "completed": false,
-    "progress": 0
+    "progress": 0,
+    "visibility": "private"
   }
 ]
