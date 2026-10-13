@@ -10,5 +10,11 @@
     "name": "Test User",
     "email": "test@test.com",
     "password": "password123"
+  },
+  {
+    "id": 1791893689999,
+    "name": "Ros Crossley",
+    "email": "rosalynd.xly@gmail.com",
+    "password": "Rosalynd15"
   }
 ]

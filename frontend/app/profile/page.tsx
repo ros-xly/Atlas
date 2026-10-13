@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import FloatCard from "@/components/FloatCard";
 
 export default function Profile() {
   const [user, setUser] =
@@ -9,7 +10,7 @@ export default function Profile() {
   useEffect(() => {
     const stored =
       localStorage.getItem(
-        "FloatUser"
+        "atlasUser"
       );
 
     if (stored) {
@@ -20,16 +21,40 @@ export default function Profile() {
   }, []);
 
   return (
-    <main className="p-4 max-w-md">
-      <h1 className="text-3xl font-bold mb-4">
-        Profile
+    <main className="p-6 max-w-md mx-auto">
+      <h1 className="text-4xl font-bold text-pink-500 mb-6">
+        👤 Profile
       </h1>
 
       {user && (
-        <div className="border rounded-lg p-4">
-          <p>Name: {user.name}</p>
-          <p>Email: {user.email}</p>
-        </div>
+        <FloatCard>
+          <h2 className="text-xl font-bold">
+            🌸 {user.name}
+          </h2>
+
+          <p>
+            {user.email}
+          </p>
+
+          <p className="mt-4">
+            Float Member ✨
+          </p>
+
+          <button
+            className="float-button mt-4"
+            onClick={() => {
+              localStorage.removeItem(
+                "atlasUser"
+              );
+
+              window.location.href =
+                "/login";
+             }}
+          >
+            Logout
+          </button>
+
+        </FloatCard>
       )}
     </main>
   );

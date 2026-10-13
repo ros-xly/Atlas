@@ -30,46 +30,56 @@ export default function Login() {
 
     if (result.success) {
       localStorage.setItem(
-        "FloatUser",
+        "atlasUser",
         JSON.stringify(result.user)
       );
 
-      alert("Login Successful");
+      window.location.href = "/";
     } else {
-      alert("Login Failed");
+      alert(
+        "Login failed 💖"
+      );
     }
   }
 
   return (
-    <main className="p-4 max-w-md">
-      <h1 className="text-3xl font-bold mb-4">
-        Login
+    <main className="p-6 max-w-md mx-auto">
+      <h1 className="text-5xl font-bold text-pink-500 mb-3">
+        Float ✨
       </h1>
 
+      <p className="mb-6 text-gray-600">
+        Welcome back 🌸
+      </p>
+
       <input
-        className="border p-2 rounded w-full mb-2"
+        className="float-input"
         placeholder="Email"
         value={email}
         onChange={(e) =>
-          setEmail(e.target.value)
+          setEmail(
+            e.target.value
+          )
         }
       />
 
       <input
+        className="float-input"
         type="password"
-        className="border p-2 rounded w-full mb-2"
         placeholder="Password"
         value={password}
         onChange={(e) =>
-          setPassword(e.target.value)
+          setPassword(
+            e.target.value
+          )
         }
       />
 
       <button
-        className="border px-4 py-2 rounded"
+        className="float-button"
         onClick={login}
       >
-        Login
+        Sign In 💖
       </button>
     </main>
   );

@@ -3,67 +3,89 @@
 import { useState } from "react";
 
 export default function Register() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, setName] =
+    useState("");
+
+  const [email, setEmail] =
+    useState("");
+
   const [password, setPassword] =
     useState("");
 
   async function register() {
-    await fetch("/api/register", {
-      method: "POST",
-      headers: {
-        "Content-Type":
-          "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        password,
-      }),
-    });
+    await fetch(
+      "/api/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type":
+            "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          password,
+        }),
+      }
+    );
 
-    alert("Account Created");
+    alert(
+      "Account Created 🌸"
+    );
+
+    window.location.href =
+      "/login";
   }
 
   return (
-    <main className="p-4 max-w-md">
-      <h1 className="text-3xl font-bold mb-4">
-        Register
+    <main className="p-6 max-w-md mx-auto">
+      <h1 className="text-5xl font-bold text-pink-500 mb-3">
+        Float ✨
       </h1>
 
+      <p className="mb-6 text-gray-600">
+        Create your account 💖
+      </p>
+
       <input
-        className="border p-2 rounded w-full mb-2"
+        className="float-input"
         placeholder="Name"
         value={name}
         onChange={(e) =>
-          setName(e.target.value)
+          setName(
+            e.target.value
+          )
         }
       />
 
       <input
-        className="border p-2 rounded w-full mb-2"
+        className="float-input"
         placeholder="Email"
         value={email}
         onChange={(e) =>
-          setEmail(e.target.value)
+          setEmail(
+            e.target.value
+          )
         }
       />
 
       <input
         type="password"
-        className="border p-2 rounded w-full mb-2"
+        className="float-input"
         placeholder="Password"
         value={password}
         onChange={(e) =>
-          setPassword(e.target.value)
+          setPassword(
+            e.target.value
+          )
         }
       />
 
       <button
-        className="border px-4 py-2 rounded"
+        className="float-button"
         onClick={register}
       >
-        Create Account
+        Create Account ✨
       </button>
     </main>
   );
