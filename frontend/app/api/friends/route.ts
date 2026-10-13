@@ -1,5 +1,7 @@
-import { friends } from "@/lib/friends";
+import { getFriends } from "@/lib/friendStorage";
 
 export async function GET() {
-  return Response.json(friends);
+  return Response.json(
+    getFriends()
+  );
 }
