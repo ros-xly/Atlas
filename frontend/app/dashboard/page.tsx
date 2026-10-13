@@ -63,6 +63,10 @@ export default function Dashboard() {
           {dashboard.conditioningTemplates} Conditioning Templates
         </p>
 
+        <p>
+         {dashboard.routineCount} Routines Created
+        </p>
+
       </div>
 
 
