@@ -1,4 +1,4 @@
-# Atlas Mobile Checklist
+# Float Mobile Checklist
 
 Homepage
 

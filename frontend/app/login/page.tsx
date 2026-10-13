@@ -30,7 +30,7 @@ export default function Login() {
 
     if (result.success) {
       localStorage.setItem(
-        "atlasUser",
+        "FloatUser",
         JSON.stringify(result.user)
       );
 

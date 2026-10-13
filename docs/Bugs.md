@@ -1,4 +1,4 @@
-Atlas Bug Tracker
+Float Bug Tracker
 
 Known Issues
 

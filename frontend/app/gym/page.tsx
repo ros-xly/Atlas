@@ -1,36 +1,41 @@
 import Link from "next/link";
 import { exercises } from "@/lib/exercises";
+import FloatCard from "@/components/FloatCard";
 
 export default function Gym() {
   return (
-    <main className="p-4 max-w-md">
-      <h1 className="text-3xl font-bold mb-4">
-        Exercise Library
+    <main className="p-6 max-w-md mx-auto">
+      <h1 className="text-4xl font-bold text-pink-500 mb-2">
+        💪 Gym
       </h1>
 
-      <Link
-        href="/gym/create"
-        className="border px-4 py-2 rounded inline-block mb-4"
-      >
-        Add Exercise
+      <p className="mb-6 text-gray-600">
+        Build strength. Track progress.
+      </p>
+
+      <Link href="/gym/create">
+        <button className="float-button mb-6">
+          Add Exercise 💖
+        </button>
       </Link>
 
-      {exercises.map((exercise) => (
-        <div
-          key={exercise.id}
-          className="border rounded-lg p-4 mb-3"
-        >
-          <h2>{exercise.name}</h2>
+      <div className="space-y-4">
+        {exercises.map((exercise) => (
+          <FloatCard key={exercise.id}>
+            <h2 className="text-lg font-bold">
+              {exercise.name}
+            </h2>
 
-          <p>
-            Category: {exercise.category}
-          </p>
+            <p>
+              {exercise.category}
+            </p>
 
-          <p>
-            {exercise.sets} x {exercise.reps}
-          </p>
-        </div>
-      ))}
+            <p className="mt-2">
+              {exercise.sets} × {exercise.reps}
+            </p>
+          </FloatCard>
+        ))}
+      </div>
     </main>
   );
 }

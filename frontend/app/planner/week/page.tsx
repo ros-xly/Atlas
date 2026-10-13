@@ -1,24 +1,26 @@
 import { calendarItems } from "@/lib/calendar";
+import FloatCard from "@/components/FloatCard";
 
 export default function WeekView() {
   return (
-    <main className="p-4 max-w-md">
-      <h1 className="text-3xl font-bold mb-4">
-        Week View
+    <main className="p-6 max-w-md mx-auto">
+      <h1 className="text-4xl font-bold text-pink-500 mb-6">
+        🌸 My Week
       </h1>
 
-      {calendarItems.map((item) => (
-        <div
-          key={item.day}
-          className="border rounded-lg p-3 mb-2"
-        >
-          <strong>{item.day}</strong>
+      <div className="space-y-4">
+        {calendarItems.map((item) => (
+          <FloatCard key={item.day}>
+            <h2 className="font-bold">
+              {item.day}
+            </h2>
 
-          <br />
-
-          {item.activity}
-        </div>
-      ))}
+            <p>
+              {item.activity}
+            </p>
+          </FloatCard>
+        ))}
+      </div>
     </main>
   );
 }

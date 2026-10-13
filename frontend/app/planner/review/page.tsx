@@ -1,25 +1,26 @@
 import { weeklyReview } from "@/lib/weeklyReview";
+import FloatCard from "@/components/FloatCard";
 
 export default function WeeklyReview() {
   return (
-    <main className="p-4 max-w-md">
-      <h1 className="text-3xl font-bold mb-4">
-        Weekly Review
+    <main className="p-6 max-w-md mx-auto">
+      <h1 className="text-4xl font-bold text-pink-500 mb-6">
+        💖 Weekly Review
       </h1>
 
-      <div className="border rounded-lg p-4">
+      <FloatCard>
         <p>
-          Workouts Completed: {weeklyReview.completedWorkouts}
+          💪 Workouts: {weeklyReview.completedWorkouts}
         </p>
 
         <p>
-          Runs Completed: {weeklyReview.completedRuns}
+          🏃 Runs: {weeklyReview.completedRuns}
         </p>
 
         <p>
-          Aerial Sessions Completed: {weeklyReview.completedAerialSessions}
+          🎪 Aerial: {weeklyReview.completedAerialSessions}
         </p>
-      </div>
+      </FloatCard>
     </main>
   );
 }

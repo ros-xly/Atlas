@@ -1,4 +1,4 @@
-Atlas Launch Checklist
+Float Launch Checklist
 
 Goals
 Gym

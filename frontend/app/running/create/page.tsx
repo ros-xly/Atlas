@@ -1,32 +1,32 @@
 export default function CreateRun() {
   return (
-    <main className="p-4 max-w-md">
-      <h1 className="text-3xl font-bold mb-4">
-        Log Run
+    <main className="p-6 max-w-md mx-auto">
+      <h1 className="text-4xl font-bold text-pink-500 mb-6">
+        Log Run 🏃✨
       </h1>
 
       <input
-        className="border p-2 rounded w-full mb-2"
+        className="float-input"
         placeholder="Distance (km)"
       />
 
       <input
-        className="border p-2 rounded w-full mb-2"
+        className="float-input"
         placeholder="Time"
       />
 
       <input
-        className="border p-2 rounded w-full mb-2"
+        className="float-input"
         placeholder="Feeling"
       />
 
       <textarea
-        className="border p-2 rounded w-full mb-2"
-        placeholder="Notes"
+        className="float-input"
+        placeholder="How did it feel?"
       />
 
-      <button className="border px-4 py-2 rounded">
-        Save Run
+      <button className="float-button">
+        Save Run 💖
       </button>
     </main>
   );

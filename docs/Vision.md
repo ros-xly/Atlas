@@ -1,6 +1,6 @@
-# Atlas Vision
+# Float Vision
 
-Atlas is a personal training hub that combines gym, running and aerial training into one platform.
+Float is a personal training hub that combines gym, running and aerial training into one platform.
 
 Users can:
 
@@ -12,4 +12,4 @@ Users can:
 - Monitor progress
 - Share progress with friends
 
-Atlas is designed to become the primary training and planning system for its users.
+Float is designed to become the primary training and planning system for its users.

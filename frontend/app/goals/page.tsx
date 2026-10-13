@@ -1,28 +1,25 @@
 import Link from "next/link";
 import { getGoals } from "@/lib/goalStorage";
+import FloatCard from "@/components/FloatCard";
 
 export default function Goals() {
   const goals = getGoals();
 
   return (
-    <main className="p-4 max-w-md">
-      <h1 className="text-3xl font-bold mb-6">
-        Goals
+    <main className="p-6 max-w-md mx-auto">
+      <h1 className="text-4xl font-bold text-pink-500 mb-4">
+        🎯 Goals
       </h1>
 
-      <Link
-        href="/goals/create"
-        className="border px-4 py-2 rounded mb-4 inline-block"
-      >
-        Add Goal
+      <Link href="/goals/create">
+        <button className="float-button mb-4">
+          Add Goal
+        </button>
       </Link>
 
       {goals.map((goal: any) => (
-        <div
-          key={goal.id}
-          className="border rounded-lg p-4 mb-3 mt-3"
-        >
-          <h2 className="font-semibold">
+        <FloatCard key={goal.id}>
+          <h2 className="font-bold text-lg">
             {goal.title}
           </h2>
 
@@ -31,13 +28,13 @@ export default function Goals() {
           <p className="mt-2">
             {goal.completed
               ? "✅ Complete"
-              : "⬜ In Progress"}
+              : "🌸 In Progress"}
           </p>
 
           <p>
             Progress: {goal.progress}%
           </p>
-        </div>
+        </FloatCard>
       ))}
     </main>
   );

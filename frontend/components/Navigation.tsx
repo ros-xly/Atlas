@@ -4,7 +4,7 @@ export default function Navigation() {
   return (
     <nav className="bg-slate-100 border-b p-4">
       <h1 className="text-xl font-bold text-blue-600 mb-2">
-        Atlas
+        Float
       </h1>
 
       <div className="flex flex-wrap gap-3 text-sm">

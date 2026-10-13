@@ -9,7 +9,7 @@ export default function Profile() {
   useEffect(() => {
     const stored =
       localStorage.getItem(
-        "atlasUser"
+        "FloatUser"
       );
 
     if (stored) {

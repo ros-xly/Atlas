@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navigation from "../components/Navigation";
+
+import BottomNav from "../components/BottomNav";
 
 export const metadata: Metadata = {
-  title: "Atlas",
+  title: "Float ✨",
   description: "Plan. Train. Progress.",
 };
 
@@ -15,8 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navigation />
-        {children}
+        <main className="pb-24">
+          {children}
+        </main>
+
+        <BottomNav />
       </body>
     </html>
   );

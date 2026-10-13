@@ -1,35 +1,55 @@
+import Link from "next/link";
 import { runs } from "@/lib/runs";
+import FloatCard from "@/components/FloatCard";
 
 export default function Running() {
   return (
-    <main className="p-4 max-w-md">
-      <h1 className="text-3xl font-bold mb-4">
-        Run Tracking
+    <main className="p-6 max-w-md mx-auto">
+      <h1 className="text-4xl font-bold text-pink-500 mb-2">
+        🏃 Running
       </h1>
 
-      {runs.map((run) => (
-        <div
-          key={run.id}
-          className="border rounded-lg p-4 mb-3"
-        >
-          <p>
-            Distance: {run.distance}km
-          </p>
+      <p className="mb-6 text-gray-600">
+        Every run tells a story.
+        <FloatCard>
+      <h2 className="font-bold text-lg">
+        🌸 Running Journey
+      </h2>
 
-          <p>
-            Time: {run.duration}
-          </p>
+  <p>
+    Track distance, pace and how
+    every run feels.
+  </p>
+</FloatCard>
+      </p>
 
-          <p>
-            Feeling: {run.feeling}
-          </p>
+      <Link href="/running/create">
+        <button className="float-button mb-6">
+          Log Run ✨
+        </button>
+      </Link>
 
-          <p>
-            Notes: {run.notes}
-          </p>
+      <div className="space-y-4">
+        {runs.map((run) => (
+          <FloatCard key={run.id}>
+            <h2 className="font-bold text-lg">
+              {run.distance}km
+            </h2>
 
-        </div>
-      ))}
+            <p>
+              Time: {run.duration}
+            </p>
+
+            <p>
+              Feeling: {run.feeling}
+            </p>
+
+            <p className="mt-2 text-sm">
+              {run.notes}
+            </p>
+          </FloatCard>
+        ))}
+      </div>
     </main>
   );
 }

@@ -3,7 +3,7 @@
 export default function Logout() {
   function logout() {
     localStorage.removeItem(
-      "atlasUser"
+      "FloatUser"
     );
 
     alert("Logged Out");

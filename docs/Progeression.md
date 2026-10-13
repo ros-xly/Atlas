@@ -1,4 +1,4 @@
-Atlas Progression Strategy
+Float Progression Strategy
 
 Pass workout:
 +3% to +5%

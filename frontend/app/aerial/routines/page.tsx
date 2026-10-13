@@ -1,24 +1,27 @@
 import { routines } from "@/lib/routines";
+import FloatCard from "@/components/FloatCard";
 
 export default function Routines() {
   return (
-    <main className="p-4 max-w-md">
-      <h1 className="text-3xl font-bold mb-4">
-        Routines
+    <main className="p-6 max-w-md mx-auto">
+      <h1 className="text-4xl font-bold text-pink-500 mb-6">
+        🌸 Routines
       </h1>
 
-      {routines.map((routine) => (
-        <div
-          key={routine.id}
-          className="border rounded-lg p-4 mb-3"
-        >
-          <h2 className="font-semibold">
-            {routine.name}
-          </h2>
+      <div className="space-y-4">
+        {routines.map((routine) => (
+          <FloatCard key={routine.id}>
+            <h2 className="font-bold">
+              {routine.name}
+            </h2>
 
-          <p>{routine.notes}</p>
-        </div>
-      ))}
+            <p>
+              {routine.notes}
+            </p>
+          </FloatCard>
+        ))}
+      </div>
     </main>
   );
 }
+``
