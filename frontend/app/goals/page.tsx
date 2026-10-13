@@ -1,6 +1,8 @@
-import { goals } from "@/lib/goals";
+import { getGoals } from "@/lib/goalStorage";
 
 export default function Goals() {
+  const goals = getGoals();
+
   return (
     <main className="p-4 max-w-md">
       <h1 className="text-3xl font-bold mb-6">
@@ -11,7 +13,7 @@ export default function Goals() {
         Add Goal
       </button>
 
-      {goals.map((goal) => (
+      {goals.map((goal: any) => (
         <div
           key={goal.id}
           className="border rounded-lg p-4 mb-3"
@@ -21,17 +23,18 @@ export default function Goals() {
           </h2>
 
           <p className="text-sm">
-          {goal.category}
+            {goal.category}
           </p>
 
           <p className="text-sm mt-2">
-          {goal.completed ? "✅ Complete" : "⬜ In Progress"}
+            {goal.completed
+              ? "✅ Complete"
+              : "⬜ In Progress"}
           </p>
 
           <p className="text-sm">
             Progress: {goal.progress}%
           </p>
-
         </div>
       ))}
     </main>

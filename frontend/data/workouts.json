@@ -1,0 +1,8 @@
+[
+  {
+    "id": 1,
+    "name": "Upper Body Strength",
+    "exercises": [1],
+    "restMinutes": 5
+  }
+]
